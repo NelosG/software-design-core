@@ -21,9 +21,9 @@
 
         <kotlin.version>1.7.21</kotlin.version>
         <hibernate-entitymanager.version>5.6.14.Final</hibernate-entitymanager.version>
-        <postgresql.version>42.5.0</postgresql.version>
+        <postgresql.version>42.5.1</postgresql.version>
         <javax.persistence-api.version>2.2</javax.persistence-api.version>
-        <spring-boot.version>2.7.5</spring-boot.version>
+        <spring-boot.version>3.0.0</spring-boot.version>
         <spring-orm.version>5.3.23</spring-orm.version>
         <spring-tx.version>6.0.0</spring-tx.version>
         <bootstrap.version>5.2.2</bootstrap.version>
