@@ -43,6 +43,16 @@ abstract class ServiceImpl<T : AbstractEntity, DAO : Dao<T>> : Service<T> {
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
+    override fun remove(entities: Collection<T>) {
+        return entities.forEach(::remove)
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    override fun remove(ids: List<Long>) {
+        return ids.forEach(::remove)
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
     override fun remove(id: Long) {
         try {
             dao.remove(id)

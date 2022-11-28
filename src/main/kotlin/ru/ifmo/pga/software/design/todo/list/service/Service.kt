@@ -17,5 +17,9 @@ interface Service<T : AbstractEntity> {
 
     fun remove(entity: T)
 
+    fun remove(entities: Collection<T>)
+
+    fun remove(ids: List<Long>)
+
     fun remove(id: Long)
 }
