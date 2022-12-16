@@ -1,8 +1,8 @@
 package ru.ifmo.pga.software.design.core.dao.impl
 
+import jakarta.persistence.EntityManager
+import jakarta.persistence.PersistenceContext
 import ru.ifmo.pga.software.design.core.entity.AbstractEntity
-import javax.persistence.EntityManager
-import javax.persistence.PersistenceContext
 
 /**
  * @author Gleb Pushkarev

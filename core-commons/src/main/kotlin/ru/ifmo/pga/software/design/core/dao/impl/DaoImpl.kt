@@ -1,12 +1,12 @@
 package ru.ifmo.pga.software.design.core.dao.impl
 
+import jakarta.persistence.EntityManager
 import org.springframework.transaction.annotation.Propagation
 import org.springframework.transaction.annotation.Transactional
 import ru.ifmo.pga.software.design.core.dao.Dao
 import ru.ifmo.pga.software.design.core.dao.exceptions.DaoException
 import ru.ifmo.pga.software.design.core.entity.AbstractEntity
 import java.lang.reflect.ParameterizedType
-import javax.persistence.EntityManager
 
 /**
  * @author Gleb Pushkarev

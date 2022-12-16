@@ -1,7 +1,7 @@
 package ru.ifmo.pga.software.design.core.entity.enums
 
+import jakarta.persistence.AttributeConverter
 import java.lang.reflect.ParameterizedType
-import javax.persistence.AttributeConverter
 
 /**
  * @author Gleb Pushkarev

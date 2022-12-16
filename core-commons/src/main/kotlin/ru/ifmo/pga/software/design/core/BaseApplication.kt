@@ -1,6 +1,7 @@
 package ru.ifmo.pga.software.design.core
 
 import org.hibernate.SessionFactory
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
@@ -23,6 +24,8 @@ open class BaseApplication {
 
     @Autowired
     lateinit var env: Environment
+
+    val logger = LoggerFactory.getLogger(javaClass)
 
     @Bean("dataSource")
     open fun getDataSource(): DataSource? {

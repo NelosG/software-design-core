@@ -1,7 +1,8 @@
 package ru.ifmo.pga.software.design.core.entity;
 
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Transient;
+
 import java.util.Objects;
 
 /**

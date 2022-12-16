@@ -25,15 +25,15 @@
         <maven.compiler.target>17</maven.compiler.target>
 
         <kotlin.version>1.7.21</kotlin.version>
-        <hibernate-entitymanager.version>5.6.14.Final</hibernate-entitymanager.version>
         <postgresql.version>42.5.1</postgresql.version>
-        <javax.persistence-api.version>2.2</javax.persistence-api.version>
-        <spring-boot.version>2.7.6</spring-boot.version>
-        <spring-orm.version>5.3.23</spring-orm.version>
-        <spring-tx.version>6.0.0</spring-tx.version>
-        <bootstrap.version>5.2.2</bootstrap.version>
+        <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
+        <hibernate-core.version>6.1.6.Final</hibernate-core.version>
+        <slf4j-api.version>2.0.6</slf4j-api.version>
+        <spring-boot.version>3.0.0</spring-boot.version>
+        <spring.version>6.0.2</spring.version>
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+
         <!-- TESTS -->
         <junit-jupiter-engine.version>5.9.1</junit-jupiter-engine.version>
         <mockito.version>4.8.0</mockito.version>
@@ -69,7 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>${maven-source-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -106,18 +106,17 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate-entitymanager.version}</version>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-core.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>javax.persistence-api</artifactId>
-            <version>${javax.persistence-api.version}</version>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>${jakarta.persistence-api.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
@@ -139,6 +138,12 @@
             <artifactId>spring-boot-starter</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
 
         <!-- hot swapping, disable cache for template, enable live reload -->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
@@ -153,13 +158,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${spring-orm.version}</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${spring-tx.version}</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- TESTS -->
