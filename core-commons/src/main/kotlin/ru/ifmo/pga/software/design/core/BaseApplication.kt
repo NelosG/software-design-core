@@ -17,7 +17,7 @@ import javax.sql.DataSource
  * @author Gleb Pushkarev
  * @since 1.0.0
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = ["ru.ifmo.pga.software.design"])
 @Configuration
 @EnableTransactionManagement
 open class BaseApplication {
